@@ -1,0 +1,483 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+:root {
+    --pika: rgb(236, 236, 29);
+    --SombraPasto: rgb(93, 182, 68);
+}
+
+img {
+    position: absolute;
+}
+
+img.img1 {
+    transform: rotate(-20deg);
+    left: 140px;
+    top: 80px;
+}
+
+img.img2 {
+    left: 340px;
+    top: 250px;
+    z-index: -5;
+    transform: rotate(-26deg);
+}
+
+
+/* GLOBALES */
+
+body {
+    overflow: hidden;
+}
+
+.container {
+    max-width: 100%;
+    width: 75%;
+    margin: 0 auto;
+}
+
+
+/* PIKACHU CENTER*/
+
+div.pikachu-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+div.center {
+    padding: 50px 0;
+    width: 40%;
+    height: 100vh;
+}
+
+
+/* PIKACHU OREJAS */
+
+div.orejas {
+    display: flex;
+    justify-content: space-between;
+}
+
+div.oreja1,
+div.oreja2 {
+    position: relative;
+    width: 500px;
+    height: 50px;
+    background-color: var(--pika);
+    margin: 0 30px;
+    border-radius: 50%;
+    border: 1px solid #0f0f0f;
+}
+
+div.oreja1::before {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 0;
+    border-radius: 50%;
+    transform: rotate(8deg);
+    width: 108px;
+    height: 44px;
+    clip-path: polygon(9% 1%, 11% 8%, 13% 15%, 16% 21%, 19% 28%, 22% 33%, 26% 39%, 30% 43%, 34% 48%, 39% 52%, 44% 57%, 49% 61%, 54% 65%, 62% 70%, 68% 74%, 73% 77%, 79% 81%, 86% 84%, 92% 86%, 98% 91%, 99% 96%, 97% 100%, 1% 99%, 0% 0%, 5% 0%);
+    background-color: black;
+}
+
+div.punta::before {
+    content: '';
+    position: absolute;
+    top: 7px;
+    left: -23px;
+    width: 37px;
+    height: 30px;
+    clip-path: polygon(100% 14%, 93% 15%, 85% 18%, 76% 20%, 69% 24%, 61% 29%, 54% 34%, 48% 41%, 40% 48%, 45% 56%, 51% 64%, 56% 69%, 61% 75%, 67% 80%, 74% 84%, 81% 88%, 88% 90%, 95% 91%, 100% 91%);
+    background-color: rgb(0, 0, 0);
+}
+
+div.oreja2::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    right: -3px;
+    border-radius: 50%;
+    transform: rotate(-8deg) rotateY(-180deg);
+    width: 107px;
+    height: 43px;
+    clip-path: polygon(9% 1%, 11% 8%, 13% 15%, 16% 21%, 19% 28%, 22% 33%, 26% 39%, 30% 43%, 34% 48%, 39% 52%, 44% 57%, 49% 61%, 54% 65%, 62% 70%, 68% 74%, 73% 77%, 79% 81%, 86% 84%, 92% 86%, 98% 91%, 99% 96%, 97% 100%, 1% 99%, 0% 0%, 5% 0%);
+    background-color: black;
+}
+
+div.punta2::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    right: -23px;
+    width: 37px;
+    height: 30px;
+    transform: rotate(-180deg);
+    clip-path: polygon(100% 14%, 93% 15%, 85% 18%, 76% 20%, 69% 24%, 61% 29%, 54% 34%, 48% 41%, 40% 48%, 45% 56%, 51% 64%, 56% 69%, 61% 75%, 67% 80%, 74% 84%, 81% 88%, 88% 90%, 95% 91%, 100% 91%);
+    background-color: rgb(0, 0, 0);
+}
+
+div.oreja1 {
+    transform: rotate(50deg);
+    border-right: none;
+}
+
+div.oreja2 {
+    transform: rotate(-50deg);
+    border-left: none;
+}
+
+
+/* PIKACHU CARA */
+
+div.header {
+    display: flex;
+    justify-content: center;
+    height: 240px;
+}
+
+div.head1 {
+    top: -5px;
+    width: 230px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 0 auto;
+    z-index: 2;
+    position: relative;
+    background-color: var(--pika);
+    border: 1px solid #0f0f0f;
+    border-top: none;
+}
+
+div.head2 {
+    width: 246px;
+    height: 170px;
+    border-radius: 50%;
+    z-index: 2;
+    position: relative;
+    top: -150px;
+    background-color: var(--pika);
+    border-bottom: 2px solid #0f0f0f;
+}
+
+
+/* PIKACHU CARA/OJOS */
+
+div.ojos-center {
+    display: flex;
+    justify-content: center;
+}
+
+div.ojos {
+    width: 60%;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+div.ojo1 {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0);
+}
+
+div.ojo2 {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0);
+}
+
+div.brillo {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    z-index: 1;
+    top: 10px;
+    right: 5px;
+    border-radius: 50%;
+    background-color: rgb(248, 248, 248);
+}
+
+div.brillo2 {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+    border-radius: 50%;
+    background-color: rgba(156, 141, 72, 0.5);
+}
+
+div.brillo3 {
+    width: 9px;
+    height: 9px;
+    position: absolute;
+    bottom: 4px;
+    left: 10px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+}
+
+
+/* PIKACHU CARA/MEJILLA */
+
+div.mejillas {
+    display: flex;
+    justify-content: space-between;
+    width: 96%;
+    margin: 15px auto;
+}
+
+div.mejilla {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(236, 34, 15);
+    border-radius: 50%;
+    border: 1px solid #0f0f0f;
+}
+
+div.boca {
+    display: flex;
+}
+
+div.labios {
+    width: 30px;
+    height: 30px;
+    border-bottom: 2px solid #000000;
+    border-radius: 50%;
+}
+
+div.cuello-center {
+    display: flex;
+    justify-content: center;
+}
+
+div.cuello {
+    width: 100px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--pika);
+}
+
+div.cuello-sombra {
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    width: 60px;
+    position: relative;
+    top: -8px;
+    margin: 0 auto;
+    border-radius: 50%;
+    height: 5px;
+    background-color: rgba(156, 141, 72, 0.822);
+}
+
+
+/* PIKACHU/CUERPO */
+
+div.body {
+    display: flex;
+    position: relative;
+    top: -70px;
+    justify-content: center;
+    width: 100%;
+}
+
+div.cuerpo {
+    clip-path: polygon(83% 0, 83% 13%, 86% 28%, 90% 41%, 100% 57%, 100% 100%, 1% 100%, 0% 59%, 10% 43%, 15% 28%, 17% 14%, 18% 0);
+    width: 260px;
+    position: relative;
+    height: 190px;
+    background-color: var(--pika);
+}
+
+div.brazos {
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    width: 260px;
+}
+
+div.brazo {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 70px;
+    margin: 0 20px;
+    height: 130px;
+    width: 80px;
+    border-radius: 44%;
+    background-color: var(--pika);
+    border: 1px solid #0f0f0f;
+    border-top: none;
+    border-bottom: none;
+}
+
+div.brazo1 {
+    transform: rotate(-20deg);
+}
+
+div.brazo2 {
+    transform: rotate(20deg);
+}
+
+div.dedos {
+    display: flex;
+    position: absolute;
+    bottom: -3px;
+}
+
+div.dedo {
+    border-radius: 50%;
+    width: 15px;
+    height: 28px;
+    background-color: var(--pika);
+    border-bottom: 2px solid #0f0f0f;
+}
+
+div.pierna {
+    display: flex;
+    justify-content: center;
+    margin: 0 20px;
+    height: 130px;
+    width: 70px;
+    border-radius: 44%;
+    background-color: var(--pika);
+    border: 2px solid #0f0f0f;
+    border-top: none;
+    border-bottom: none;
+}
+
+div.Piernas {
+    position: absolute;
+    bottom: 0;
+    width: 260px;
+    display: flex;
+    justify-content: space-between;
+}
+
+div.pierna1 {
+    transform: rotate(150deg);
+    position: relative;
+    left: -46px;
+    bottom: -20px;
+    border-right: none;
+}
+
+div.pierna2 {
+    transform: rotate(-150deg);
+    position: relative;
+    right: -46px;
+    bottom: -20px;
+    border-left: none;
+}
+
+div.huella {
+    height: 65px;
+    width: 30px;
+    background-color: rgb(255, 157, 0);
+    border-radius: 50%;
+}
+
+div.huella1 {
+    position: absolute;
+    top: 10px;
+    right: 5px;
+}
+
+div.huella2 {
+    position: absolute;
+    top: 10px;
+    left: 5px;
+}
+
+
+/* PIKACHU/COLA */
+
+div.cola {
+    position: relative;
+    z-index: -2;
+    left: -100px;
+    bottom: -50px;
+}
+
+div.cola1 {
+    position: relative;
+    width: 30px;
+    height: 40px;
+    background-color: #0f0f0f;
+    transform: rotate(-35deg);
+}
+
+div.cola2 {
+    position: absolute;
+    top: -50px;
+    right: -35px;
+    width: 60px;
+    height: 50px;
+    background-color: var(--pika);
+    transform: rotate(-40deg);
+}
+
+div.cola3 {
+    position: absolute;
+    top: -180px;
+    right: -150px;
+    width: 200px;
+    height: 90px;
+    background: rgb(236, 255, 39);
+    background: linear-gradient(90deg, rgba(236, 255, 39, 1) 55%, rgba(0, 0, 0, 1) 100%);
+    background-color: var(--pika);
+    transform: rotate(-40deg);
+}
+
+div.suelo {
+    max-width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -100px;
+    margin: 0 auto;
+    width: 450px;
+    height: 80px;
+    background-color: rgb(10, 143, 10);
+    box-shadow: 0 1px var(--SombraPasto), 0 2px var(--SombraPasto), 0 3px var(--SombraPasto), 0 4px var(--SombraPasto), 0 5px var(--SombraPasto), 0 6px var(--SombraPasto), 0 7px var(--SombraPasto), 0 8px var(--SombraPasto), 0 9px var(--SombraPasto), 0 10px var(--SombraPasto), 0 11px var(--SombraPasto), 0 12px var(--SombraPasto), 0 13px var(--SombraPasto), 0 14px var(--SombraPasto), 0 15px var(--SombraPasto), 0 16px var(--SombraPasto), 0 17px var(--SombraPasto), 0 18px var(--SombraPasto), 0 19px var(--SombraPasto);
+    border-radius: 50%;
+    z-index: -2;
+}
+
+div.suelo2 {
+    z-index: -3;
+    top: -150px;
+    width: 350px;
+    height: 80px;
+}
+
+div.suelo3 {
+    z-index: -4;
+    top: -175px;
+    width: 250px;
+    height: 55px;
+}
+
+div.pika-sombre {
+    position: absolute;
+    width: 180px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: rgb(78, 185, 74);
+}
